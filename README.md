@@ -6,9 +6,9 @@ The Kettle Dynamic Schema Processor from Inquidia Consulting allows you to imple
 Installation:
 --------------------------
 
-1. Place the KettleDynamicSchemaProcessor jar in the <BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib directory
-2. If you plan to store the Kettle transformation in the Jackrabbit repository place the libpensol jar in the <BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib directory
-3. Some useful CDE dashboards to help with development may be uploaded to BA server using the KettleDynamicSchemaProcessorUtils.zip
+1. Place the KettleDynamicSchemaProcessor jar in the `<BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib` directory
+2. If you plan to store the Kettle transformation in the Jackrabbit repository place the libpensol jar in the `<BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib` directory.  The libpensol jar may be downloaded from: http://repo.pentaho.org/artifactory/repo/pentaho-library/libpensol/JCR-SNAPSHOT/
+3. Some useful CDE dashboards to help with development may be uploaded to BA server from the util directory.
 
 Usage:
 ---------------------------
