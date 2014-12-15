@@ -8,7 +8,7 @@ Installation:
 
 1. Place the KettleDynamicSchemaProcessor jar in the `<BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib` directory
 2. If you plan to store the Kettle transformation in the Jackrabbit repository place the libpensol jar in the `<BISERVER_HOME>/tomcat/webapps/pentaho/WEB-INF/lib` directory.  The libpensol jar may be downloaded from: http://repo.pentaho.org/artifactory/repo/pentaho-library/libpensol/JCR-SNAPSHOT/
-3. Some useful CDE dashboards to help with development may be uploaded to BA server from the util directory.
+3. Some useful CDE dashboards to help with development may be uploaded to BA server from the KettleDSPUtils directory.
 
 Usage:
 ---------------------------
@@ -43,7 +43,7 @@ Any session attributes, or user settings will also be passed depending on what i
 
 #### Clearing the Cache:
 
-The dspCacheClearer dashboard will clear everything out of the dynamic schema processor cache.  This dashboard is found in the utils folder and must be deployed in BA server.
+The dspCacheClearer dashboard will clear everything out of the dynamic schema processor cache.  This dashboard is found in the KettleDSPUtils folder and must be deployed in BA server.
 
 #### Custom Parameter Handling
 
