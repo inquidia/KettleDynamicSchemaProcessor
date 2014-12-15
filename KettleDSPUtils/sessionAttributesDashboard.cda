@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="sessionAttributes" type="scripting.scripting">
+         <Initscript></Initscript>
+         <Language>beanshell</Language>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="false" cacheDuration="3600"
+               connection="sessionAttributes"
+               id="sessionAttributes"
+               type="scriptable">
+      <Columns/>
+      <Parameters/>
+      <Query>import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;&#xD;
+import java.util.Iterator;&#xD;
+import org.pentaho.platform.api.engine.IPentahoSession;&#xD;
+import org.pentaho.platform.engine.core.system.PentahoSessionHolder;&#xD;
+import org.springframework.security.Authentication;&#xD;
+import org.springframework.security.GrantedAuthority;&#xD;
+import org.springframework.security.context.SecurityContextImpl;&#xD;
+import java.lang.StringBuilder;&#xD;
+import java.util.Iterator;&#xD;
+import java.util.List;&#xD;
+import org.pentaho.platform.api.usersettings.IUserSettingService;&#xD;
+import org.pentaho.platform.api.usersettings.pojo.IUserSetting;&#xD;
+import org.springframework.security.userdetails.User;&#xD;
+import org.pentaho.platform.web.http.session.PentahoHttpSession;&#xD;
+import org.pentaho.platform.repository.usersettings.UserSettingService;&#xD;
+&#xD;
+String loggerType = dataRow.get("loggerType");&#xD;
+&#xD;
+String[] columnNames = new String[3];&#xD;
+columnNames[0] = "Attribute Name";&#xD;
+columnNames[1] = "Attribute Value";&#xD;
+columnNames[2] = "Type";&#xD;
+&#xD;
+Class[] columnTypes = new Class[3];&#xD;
+columnTypes[0] = String.class;&#xD;
+columnTypes[1] = String.class;&#xD;
+columnTypes[2] = String.class;&#xD;
+&#xD;
+IPentahoSession session = PentahoSessionHolder.getSession();&#xD;
+Iterator itAttributeNames = session.getAttributeNames();&#xD;
+&#xD;
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);&#xD;
+while( itAttributeNames.hasNext() )&#xD;
+{&#xD;
+    String attributeName = itAttributeNames.next().toString();&#xD;
+    Object attributeValue = session.getAttribute( attributeName );&#xD;
+    model.addRow( new Object[]{ attributeName, attributeValue.toString(), attributeValue.getClass().getSimpleName() } );&#xD;
+    &#xD;
+    if( attributeValue instanceof SecurityContextImpl )&#xD;
+    {&#xD;
+        SecurityContextImpl sci = (SecurityContextImpl)attributeValue;&#xD;
+        Authentication auth = sci.getAuthentication();&#xD;
+        boolean isAuthenticated = auth.isAuthenticated();&#xD;
+        model.addRow( new Object[]{ "Security.isAuthenticated", Boolean.toString( isAuthenticated ), "Boolean"});&#xD;
+        GrantedAuthority[] authorities = auth.getAuthorities();&#xD;
+        StringBuilder builder = new StringBuilder();&#xD;
+        for( GrantedAuthority authority : authorities )&#xD;
+        {&#xD;
+            if(builder.length() &gt; 0)&#xD;
+            {&#xD;
+                builder.append(",");&#xD;
+            }&#xD;
+            builder.append(authority.getAuthority());&#xD;
+&#xD;
+            model.addRow( new Object[]{ "Security.Role."+authority.getAuthority(), "true", "boolean" } );&#xD;
+        }&#xD;
+        model.addRow( new Object[]{ "Security.Authorities", builder.toString(), "String" });&#xD;
+&#xD;
+        User user = (User)auth.getPrincipal();&#xD;
+        model.addRow( new Object[]{ "Security.User.isAccountNonExpired", user.isAccountNonExpired(), "Boolean" } );&#xD;
+        model.addRow( new Object[]{ "Security.User.isAccountNonLocked", user.isAccountNonLocked(), "Boolean" } );&#xD;
+        model.addRow( new Object[]{ "Security.User.isCredentialsNonExpired", user.isCredentialsNonExpired(), "Boolean" } );&#xD;
+        model.addRow( new Object[]{ "Security.User.isEnabled", user.isEnabled(), "Boolean" } );&#xD;
+    } else if( attributeValue instanceof IUserSettingService )&#xD;
+    {&#xD;
+        &#xD;
+        IUserSettingService userSettingService = (IUserSettingService)attributeValue;&#xD;
+        List userSettings = userSettingService.getUserSettings();&#xD;
+        Iterator itUserSettings = userSettings.iterator();&#xD;
+        &#xD;
+        while( itUserSettings.hasNext() )&#xD;
+        {&#xD;
+            IUserSetting setting = (IUserSetting)itUserSettings.next();&#xD;
+            model.addRow( new Object[]{ "UserSetting."+setting.getSettingName(),setting.getSettingValue(), "String" } );&#xD;
+        }&#xD;
+    } &#xD;
+    &#xD;
+}&#xD;
+&#xD;
+model.addRow( new Object[]{ "SessionName", session.getName(), "String" } );&#xD;
+model.addRow( new Object[]{ "SessionId", session.getId(), "String" } );&#xD;
+model.addRow( new Object[]{ "SessionLocale", session.getLocale().toString(), "String" } );&#xD;
+return model;</Query>
+   </DataAccess>
+</CDADescriptor>

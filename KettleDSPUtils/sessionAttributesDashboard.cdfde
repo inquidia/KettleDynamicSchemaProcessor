@@ -1,0 +1,356 @@
+{
+ "layout": {
+  "title": "CDF - Sample structure",
+  "rows": [
+   {
+    "id": "b324ee33-9845-178f-c0a4-80b52d4b1a4e",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "rowObj",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "85461a6f-f238-5696-ac5f-c123135245ec",
+    "type": "ComponentsTable",
+    "typeDesc": "table Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "tableComp",
+      "type": "Id"
+     },
+     {
+      "name": "expandContainerObject",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "oLanguage",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "language",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "colSortable",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colWidths",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colHeaders",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "expandParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "colTypes",
+      "value": "[]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "paginate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "lengthChange",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "filter",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "info",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "sort",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "expandOnClick",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "displayLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "colSearchable",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "drawCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "dataSource",
+      "value": "sessionAttributes",
+      "type": "Datasource"
+     },
+     {
+      "name": "sortBy",
+      "value": "[]",
+      "type": "SortByArray"
+     },
+     {
+      "name": "sDom",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "tableStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "paginationType",
+      "value": "simple_numbers",
+      "type": "PaginationType"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:rowObj}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginateServerside",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     },
+     {
+      "name": "clickAction",
+      "value": "",
+      "type": "JavaScript"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SCRIPTING",
+    "name": "SCRIPTING Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "SCRIPTING Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "73dbb647-e234-5486-6fd8-6069c5f8e5d9",
+    "type": "Componentsscriptable_scripting",
+    "typeDesc": "scriptable over scripting",
+    "parent": "SCRIPTING",
+    "properties": [
+     {
+      "name": "name",
+      "value": "sessionAttributes",
+      "type": "Id"
+     },
+     {
+      "name": "language",
+      "value": "beanshell",
+      "type": "String"
+     },
+     {
+      "name": "initscript",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "query",
+      "value": "import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\r\nimport java.util.Iterator;\r\nimport org.pentaho.platform.api.engine.IPentahoSession;\r\nimport org.pentaho.platform.engine.core.system.PentahoSessionHolder;\r\nimport org.springframework.security.Authentication;\r\nimport org.springframework.security.GrantedAuthority;\r\nimport org.springframework.security.context.SecurityContextImpl;\r\nimport java.lang.StringBuilder;\r\nimport java.util.Iterator;\r\nimport java.util.List;\r\nimport org.pentaho.platform.api.usersettings.IUserSettingService;\r\nimport org.pentaho.platform.api.usersettings.pojo.IUserSetting;\r\nimport org.springframework.security.userdetails.User;\r\nimport org.pentaho.platform.web.http.session.PentahoHttpSession;\r\nimport org.pentaho.platform.repository.usersettings.UserSettingService;\r\n\r\nString loggerType = dataRow.get(\"loggerType\");\r\n\r\nString[] columnNames = new String[3];\r\ncolumnNames[0] = \"Attribute Name\";\r\ncolumnNames[1] = \"Attribute Value\";\r\ncolumnNames[2] = \"Type\";\r\n\r\nClass[] columnTypes = new Class[3];\r\ncolumnTypes[0] = String.class;\r\ncolumnTypes[1] = String.class;\r\ncolumnTypes[2] = String.class;\r\n\r\nIPentahoSession session = PentahoSessionHolder.getSession();\r\nIterator itAttributeNames = session.getAttributeNames();\r\n\r\nTypedTableModel model = new TypedTableModel(columnNames, columnTypes);\r\nwhile( itAttributeNames.hasNext() )\r\n{\r\n    String attributeName = itAttributeNames.next().toString();\r\n    Object attributeValue = session.getAttribute( attributeName );\r\n    model.addRow( new Object[]{ attributeName, attributeValue.toString(), attributeValue.getClass().getSimpleName() } );\r\n    \r\n    if( attributeValue instanceof SecurityContextImpl )\r\n    {\r\n        SecurityContextImpl sci = (SecurityContextImpl)attributeValue;\r\n        Authentication auth = sci.getAuthentication();\r\n        boolean isAuthenticated = auth.isAuthenticated();\r\n        model.addRow( new Object[]{ \"Security.isAuthenticated\", Boolean.toString( isAuthenticated ), \"Boolean\"});\r\n        GrantedAuthority[] authorities = auth.getAuthorities();\r\n        StringBuilder builder = new StringBuilder();\r\n        for( GrantedAuthority authority : authorities )\r\n        {\r\n            if(builder.length() > 0)\r\n            {\r\n                builder.append(\",\");\r\n            }\r\n            builder.append(authority.getAuthority());\r\n\r\n            model.addRow( new Object[]{ \"Security.Role.\"+authority.getAuthority(), \"true\", \"boolean\" } );\r\n        }\r\n        model.addRow( new Object[]{ \"Security.Authorities\", builder.toString(), \"String\" });\r\n\r\n        User user = (User)auth.getPrincipal();\r\n        model.addRow( new Object[]{ \"Security.User.isAccountNonExpired\", user.isAccountNonExpired(), \"Boolean\" } );\r\n        model.addRow( new Object[]{ \"Security.User.isAccountNonLocked\", user.isAccountNonLocked(), \"Boolean\" } );\r\n        model.addRow( new Object[]{ \"Security.User.isCredentialsNonExpired\", user.isCredentialsNonExpired(), \"Boolean\" } );\r\n        model.addRow( new Object[]{ \"Security.User.isEnabled\", user.isEnabled(), \"Boolean\" } );\r\n    } else if( attributeValue instanceof IUserSettingService )\r\n    {\r\n        \r\n        IUserSettingService userSettingService = (IUserSettingService)attributeValue;\r\n        List userSettings = userSettingService.getUserSettings();\r\n        Iterator itUserSettings = userSettings.iterator();\r\n        \r\n        while( itUserSettings.hasNext() )\r\n        {\r\n            IUserSetting setting = (IUserSetting)itUserSettings.next();\r\n            model.addRow( new Object[]{ \"UserSetting.\"+setting.getSettingName(),setting.getSettingValue(), \"String\" } );\r\n        }\r\n    } \r\n    \r\n}\r\n\r\nmodel.addRow( new Object[]{ \"SessionName\", session.getName(), \"String\" } );\r\nmodel.addRow( new Object[]{ \"SessionId\", session.getId(), \"String\" } );\r\nmodel.addRow( new Object[]{ \"SessionLocale\", session.getLocale().toString(), \"String\" } );\r\nreturn model;\r\n",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     },
+     {
+      "name": "cache",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ],
+    "meta": "CDA",
+    "meta_conntype": "scripting.scripting",
+    "meta_datype": "scriptable"
+   }
+  ]
+ },
+ "filename": "/home/admin/sessionAttributesDashboard.cdfde"
+}

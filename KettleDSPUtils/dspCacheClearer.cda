@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="clearCache" type="scripting.scripting">
+         <Initscript></Initscript>
+         <Language>beanshell</Language>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="false" cacheDuration="3600" connection="clearCache"
+               id="clearCache"
+               type="scriptable">
+      <Columns/>
+      <Parameters/>
+      <Query>import org.inquidia.mondrian.utils.CacheUtils;
+import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+
+
+
+CacheUtils.clearAllRegions();
+
+String[] columnNames = new String[1];
+columnNames[0] = "Cleared Cache";
+
+
+Class[] columnTypes = new Class[1];
+columnTypes[0] = String.class;
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+model.addRow( new Object[] { "true" } );
+
+return model;</Query>
+   </DataAccess>
+</CDADescriptor>
