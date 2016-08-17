@@ -3,6 +3,10 @@ Inquidia Kettle Dynamic Schema Processor
 
 The Kettle Dynamic Schema Processor from Inquidia Consulting allows you to implement a Dynamic Schema Processor in PDI abstracting you from the Java code and allowing anyone to write a dynamic schema processor.  http://inquidia.com/news-and-info/custom-analytics-simplified-visual-design-dynamic-pentaho-mondrian-schemas
 
+Pre-requisites:
+--------------------------
+- Pentaho 6.0 or above
+
 Installation:
 --------------------------
 
